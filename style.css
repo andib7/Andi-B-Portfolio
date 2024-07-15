@@ -1,10 +1,11 @@
-/* General Styles */
+/* Light Mode */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
@@ -22,21 +23,44 @@ header .container {
     margin: 0 auto;
 }
 
+.header-content {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.profile-picture {
+    max-width: 100px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
 }
 
 .hero {
@@ -70,7 +94,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
-    margin-bottom: 2rem; /* Added space below the grid */
+    margin-bottom: 2rem;
 }
 
 .project-card {
@@ -111,6 +135,25 @@ footer {
     color: white;
 }
 
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links li {
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: #0072ff;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
 .contact-info {
     list-style: none;
     padding: 0;
@@ -128,4 +171,104 @@ footer {
 
 .contact-info a:hover {
     text-decoration: underline;
+}
+
+/* Skills Section */
+#skills {
+    padding: 2rem 0;
+    background-color: white; /* Light mode background color */
+    color: #333; /* Light mode text color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.skill {
+    background-color: #fff; /* Light mode background color */
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.skill h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill ul li {
+    margin-bottom: 0.3rem;
+}
+
+/* Dark Mode */
+[data-theme="dark"] #skills {
+    background-color: #333; /* Dark mode background color */
+    color: #ddd; /* Dark mode text color */
+}
+
+[data-theme="dark"] .skill {
+    background-color: #444; /* Dark mode background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    background-color: #222;
+    color: #ddd;
+}
+
+[data-theme="dark"] header {
+    background-color: #111;
+}
+
+[data-theme="dark"] nav ul li a {
+    color: #ddd;
+}
+
+[data-theme="dark"] .hero {
+    background: linear-gradient(to right, #1a1a1a, #222);
+}
+
+[data-theme="dark"] section {
+    background-color: #333;
+    color: #ddd;
+}
+
+[data-theme="dark"] .project-card {
+    background: #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .button {
+    background: #0072ff;
+}
+
+[data-theme="dark"] .button:hover {
+    background: #005bb5;
+}
+
+[data-theme="dark"] footer {
+    background-color: #111;
 }
