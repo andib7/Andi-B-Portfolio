@@ -5,37 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Andi Barron</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>My Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <section id="home">
-        <h2>Welcome</h2>
-        <p>Introduction text goes here.</p>
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Hi, I'm Andi. I'm a developer with a passion for creating games, innovative solutions, and fun projects.</p>
+        </div>
     </section>
     <section id="projects">
-        <h2>Projects</h2>
-        <!-- Add project details here -->
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="grid">
+                <div class="project-card">
+                    <h3>Project Title</h3>
+                    <p>Description of the project.</p>
+                    <img src="path/to/image.jpg" alt="Project Image">
+                    <a href="link/to/project" class="button">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Project Title</h3>
+                    <p>Description of the project.</p>
+                    <img src="path/to/image.jpg" alt="Project Image">
+                    <a href="link/to/project" class="button">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Project Title</h3>
+                    <p>Description of the project.</p>
+                    <img src="path/to/image.jpg" alt="Project Image">
+                    <a href="link/to/project" class="button">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Project Title</h3>
+                    <p>Description of the project.</p>
+                    <img src="path/to/image.jpg" alt="Project Image">
+                    <a href="link/to/project" class="button">View Project</a>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="about">
-        <h2>About Me</h2>
-        <!-- Add about me details here -->
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Brief bio goes here.</p>
+        </div>
     </section>
     <section id="contact">
-        <h2>Contact</h2>
-        <!-- Add contact details here -->
+        <div class="container">
+            <h2>Contact</h2>
+            <p>You can reach me at:</p>
+            <ul class="contact-info">
+                <li>Email: <a href="mailto:andibarron7@gmail.com">andibarron7@gmail.com</a></li>
+                <li>Phone: <a href="tel:+12096664175">+1 (209) 666-4175</a></li>
+            </ul>
+        </div>
     </section>
+    <section id="social">
+        <div class="container">
+            <h2>Social Media & Profiles</h2>
+            <ul class="social-links">
+                <li><a href="https://github.com/andib7" target="_blank">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/abarron7" target="_blank">LinkedIn</a></li>
+                <li><a href="https://andib7.itch.io/" target="_blank">Itch.io</a></li>
+                <li><a href="https://editor.p5js.org/andibarron7/sketches" target="_blank">p5.js</a></li>
+                <li><a href="https://leetcode.com/u/andibarron7/" target="_blank">Leetcode</a></li>
+            </ul>
+        </div>
+    </section>      
     <footer>
-        <p>&copy; 2024 My Portfolio</p>
+        <div class="container">
+            <p>&copy; 2024 My Portfolio</p>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
